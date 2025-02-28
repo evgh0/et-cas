@@ -6,7 +6,7 @@ COPY src /app/src
 COPY . /app
 
 # Compile Java files
-RUN javac -d out src/dev/evgh/et_cas/api/Main.java
+RUN javac -d out src/dev/evgh/et_cas/api/*.java src/dev/evgh/et_cas/api/**/*.java
 
 FROM openjdk:23 as runtime
 
